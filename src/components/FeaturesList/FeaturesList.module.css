@@ -1,0 +1,34 @@
+.featureTextHighlight {
+  color: var(--primary-color);
+}
+
+.featuresList {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.listItemIcon {
+  width: 66px;
+  height: 53px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .line-break {
+    display: none;
+  }
+}

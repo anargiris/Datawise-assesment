@@ -1,0 +1,132 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hamburgerLines {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  display: block;
+  margin: 6px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  line-height: 30px;
+  position: relative;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navLinks a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navLinks a.appLink {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.navLinks a.appLink:hover {
+  background-color: rgb(90, 103, 248);
+  transition: 0.3s;
+}
+
+.hamburgerOpen .hamburgerLines {
+  background-color: var(--primary-color);
+}
+
+.hamburgerOpen .hamburgerLines:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen .hamburgerLines:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburgerOpen .hamburgerLines:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.navLinksMobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobileMenu {
+    display: block;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navLinksMobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 1;
+    right: 0;
+    width: 80vw;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .navbar .navLinksMobile.showNav {
+    display: flex;
+  }
+}

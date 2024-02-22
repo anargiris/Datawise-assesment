@@ -1,0 +1,168 @@
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 102, 255, 0.2)
+  );
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContentContainer {
+  position: relative;
+  padding: 44px 164px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.ctaButton {
+  align-self: flex-start;
+}
+
+.textContent {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textContent h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  margin-bottom: 8px;
+}
+
+.textContent p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.ctaButtonDesktop {
+  display: inline;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 30px;
+}
+
+.ctaButtonDesktop:hover {
+  background-color: rgb(90, 103, 248);
+  transition: 0.3s;
+}
+
+.ctaButtonMobile {
+  display: none;
+}
+
+.brandText {
+  color: var(--primary-color);
+}
+
+.infoSection {
+  background-color: #0066ff;
+  text-align: center;
+  width: 100%;
+  padding: 24px;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.infoSection p {
+  color: #fff;
+}
+
+@media (max-width: 1440px) {
+  .mainContentContainer {
+    padding: 24px 24px 0;
+  }
+
+  .textContent h1 {
+    font-size: 42px;
+  }
+
+  .textContent p {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  .infoSection {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .mainContentContainer {
+    padding: 24px 24px 0;
+  }
+
+  .textContent {
+    justify-content: start;
+  }
+
+  .textContent h1 {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .textContent p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  .ctaButtonDesktop {
+    display: none;
+  }
+
+  .ctaButtonMobile {
+    display: inline-block;
+    white-space: nowrap;
+    width: 150px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .infoSection {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
